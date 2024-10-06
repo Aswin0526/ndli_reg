@@ -73,8 +73,8 @@ async function sendConfirmationEmail(toEmail, name) {
   return transporter.sendMail(mailOptions);
 }
 
-app.get('/home', (req, res) => {
-  res.sendFile(path.join(__dirname, 'form.html'));
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, 'index.html'));
 });
 
 app.listen(5000, () => {
